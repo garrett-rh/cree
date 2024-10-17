@@ -49,7 +49,7 @@ static void getFiles(char path[4096], char prefix[1024], int depth, int files) {
 
 int main(int argc, char **argv) {
   char dumb[1024] = "";
-  char path[4096];
+  char path[4096] = ".";
   int files = 0;
   int depth = -100;
   int option;
@@ -57,7 +57,7 @@ int main(int argc, char **argv) {
   while ((option = getopt(argc, argv, ":p:fd:h")) != -1) {
     switch (option) {
       case 'p':
-        snprintf(path, sizeof(path), "%s", optarg);
+        strncpy(path, optarg, sizeof(path));
         break;
       case 'f':
         files = 1;
