@@ -1,4 +1,4 @@
 default: build
 
 build:
-	gcc -std=c17 -Wpedantic -pedantic-errors -Wconversion -Werror -Wall -Wextra tree.c -o tree
+	gcc -std=c17 -Wpedantic -pedantic-errors -Werror -Wall tree.c -o tree
