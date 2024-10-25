@@ -73,13 +73,15 @@ int main(int argc, char **argv) {
             "-f\t set this variable if you want to see the directories & "
             "files\n");
         printf("-h\t print this page\n");
-        break;
+        exit(0);
       case ':':
         printf("one of the specified options needs a value\n");
         break;
       case '?':
         printf("unknown option: %c\n", option);
         break;
+      default:
+        exit(1);
     }
   }
 
